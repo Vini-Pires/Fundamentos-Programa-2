@@ -1,0 +1,94 @@
+A entrega dos exercícios não vale nota, mas é ALTAMENTE recomendável para consolidar o conteúdo aprendido e estar preparado para a segunda avaliação
+
+1) Crie um algoritmo que imprima uma tabela de conversão de polegadas para centímetros. Deseja-se que na tabela conste valores de 1 polegada até 20 polegadas inteiras. (Para isso considere: 1 polegada = 2,54 cm)
+Exemplo de saída:
+1” equivale a 2,54 cm
+2” equivalem a 5,08 cm
+3” equivalem a 7,62 cm
+
+2) Crie um programa que receba um número positivo Z e imprima todos os números de Z até 1 e no final exiba quais são os números múltiplos de 4, quantos números são múltiplos de 3 e a média dos números múltiplos de 5.
+
+3) Faça um programa que solicite o tamanho de um quadrado e mostre a borda de um quadrado utilizando o caracter #.
+Exemplo:
+Digite o tamanho desejado: 10
+
+#	#	#	#	#	#	#	#	#	#
+#									#
+#									#
+#									#
+#									#
+#									#
+#									#
+#									#
+#									#
+#	#	#	#	#	#	#	#	#	#
+
+
+4) Faça um programa que leia e armazene um vetor (VetorA) de inteiros e tamanho 10. Crie um VetorB, de mesmo tamanho, gerado a partir do Vetor A invertido (de trás para frente). Em seguida, calcule o VetorC que deverá ser o resultado do VetorA multiplicado pelo escalar 3 e em seguida subtraído do Vetor B.
+
+5) Faça um programa que receba 10 números inteiros. Em seguida o programa deverá permitir o usuário buscar números dentro do vetor, informando se o mesmo está ou não no vetor. O usuário poderá realizar quantas buscas quiser e finalizar ao solicitar a busca de um valor negativo.
+
+6) Faça um programa que leia e armazene as notas (valores reais) de 10 alunos.
+O programa somente deverá aceitar notas entre 0 e 10 (inclusive), solicitando uma nova digitação quando uma nota inválida for digitada. Após a leitura o programa deve:
+
+  a) Contar e exibir quantos alunos foram reprovados (nota < 6.0);
+  b) Exibir as notas dos alunos que foram aprovados (nota >= 6.0);
+  c) Calcular e exibir a média geral de todas as notas;
+  d) Calcular e exibir a porcentagem de alunos aprovados;
+  e) Exibir a nota mais alta e a mais baixa.
+
+7) Faça um programa que receba duas matrizes de números inteiros A e B, ambas 2x3. Em seguida calcule uma matriz C segundo a fórmula C = (A + B) * 2. Mostre a matriz C resultante.
+
+8) Faça um programa que receba o nome e o preço de custo de 3 produtos. Para isso, crie, além da matriz com os nomes (tamanho 20), uma matriz 3x3 de preços de produtos onde cada coluna representa: coluna 0 é o preço de custo (digitado pelo usuário), coluna 1 será o preço à vista calculado (preço de custo acrescido em 10%), coluna 2 é o preço a prazo calculado (preço de custo acrescido em 20%).  Para tanto, relacione o índice/linha da matriz de preços com o índice/linha de um vetor bidimensional de strings que armazenará o nome dos produtos.
+O programa deve exibir, um por um, o nome do produto e a sua tabela com todos os preços (custo, à vista e a prazo).
+
+9) Faça um programa que receba e armazene uma matriz de números inteiros de tamanho 4x3, em seguida o programa deverá exibir:
+   a) A soma de todos os elementos pares positivos da matriz;
+   b) A média de todos os elementos da matriz;
+   c) A quantidade de todos os elementos impares da matriz;
+   d) A soma dos elementos da segunda linha da matriz;
+   e) O maior elemento da terceira coluna da matriz;
+
+10) Faça um programa que receba e armazene 10 nomes de carros (tamanho máximo: 20 caracteres). Em seguida, o programa deverá permitir a busca pelos nomes. Ao receber um carro, o sistema deverá informar se o carro está ou não na lista e quantas vezes ele está na lista. O programa deverá finalizar se for feita a busca por "Fusca", que deve ser informado também se está ou não na lista.
+Exemplo da busca:
+Digite o carro a ser buscado: Gol
+O carro está na lista 1 vez.
+Digite o carro a ser buscado: Vectra
+O carro não está na lista.
+Digite o carro a ser buscado: Fusca
+O carro está na lista 2 vezes.
+Fim de programa.
+
+11) Faça um programa que receba uma palavra e em seguida gere e exiba uma outra string contendo a palavra concatenada da mesma palavra invertida, porém em maiúscula. Dica: usar a função toupper() da biblioteca ctype.h para transformar uma letra na sua letra maiúscula.
+
+Exemplo:
+Digite uma palavra: Brasil
+BrasilLISARB
+
+12) Desenvolva um programa que receba uma frase. O programa deverá gerar e exibir uma nova string, contendo uma "palavra sim e outra não" da frase digitada, e exibir o número de palavras da frase original.
+
+Exemplo:
+Digite uma frase: A arte de programar consiste em organizar e dominar a complexidade.
+Saída
+A de consiste organizar dominar complexidade.
+Número de palavras: 11
+
+Obs: Considere que serão digitadas apenas letras na frase do usuário (não tem pontuação nem números)
+
+13) Utilizando uma matriz de pontos (cada linha é um ponto contendo as colunas X e Y) faça o que se pede:
+  a) Em uma função, faça um programa que receba os valores de 10 pontos no espaço cartesiano 2D
+  b) Receba os dados referentes a 2 pontos (V1 e V2) que representam os vértices de um Retângulo.
+  c) Em uma função, preencha e exiba um outro vetor de pontos contendo apenas os pontos que estão dentro do retângulo formado pelos pontos V1 e V2.
+  d) Faça uma função que exiba os pontos armazenados no vetor2
+
+14) Crie um programa que gerencie um cadastro de materiais para obras disponíveis em um fornecedor. Cada material contém: nome (tamanho máximo 40 caracteres), quantidade (int) e preço (float) de no máximo 15 produtos. O programa deve possuir um menu para que o usuário do programa consiga manipular os cadastros. Nesse menu
+
+  a) Ao digitar (I), deve-se realizar inserção de um material na primeira posição que estiver livre;
+  b) Ao digitar (R), deve-se remover o material pelo índice (a ser fornecido pelo usuário );
+  c) Ao digitar (L), deve-se listar todos os cadastros não vazios;
+  d) Ao digitar (P), deve-se solicitar o nome de um material e exibir a quantidade e o preço;
+  e) Ao digitar (V), deve-se listar todos os produtos que tenham a quantidade igual a 0;
+  f) Ao digitar (S), deve sair do programa.
+
+Obs: Cada opção do menu deve ser implementada em uma função diferente. Após cada função o menu deve ser reexibido (Exceto opção S)
+Não se esqueça de criar um método para gerenciar qual posição do vetor está vazia ou não.
