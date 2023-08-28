@@ -80,6 +80,7 @@ int main () {
       );
     
     // CADASTRO DO DOCUMENTO
+    setbuf(stdin, NULL);
     if (pessoasCadastradas[i].nacionalidade == BRASILEIRO) {
       printf("Insira seu CPF: ");
       fgets(pessoasCadastradas[i].documento.cpf, 29, stdin);
