@@ -17,7 +17,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef enum {BRASILEIRO, ESTRANGEIRO} Nacionalidade;
+typedef enum {BRASILEIRO=1, ESTRANGEIRO} Nacionalidade;
 
 typedef struct {
   int dia;
@@ -61,7 +61,7 @@ int main () {
 
     // DATA DE NASCIMENTO
     printf("Insira sua data de nascimento: ");
-    scanf("%d/%0d/%d", 
+    scanf("%d/%d/%d", 
       &pessoasCadastradas[i].dataDeNascimento.dia,
       &pessoasCadastradas[i].dataDeNascimento.mes,
       &pessoasCadastradas[i].dataDeNascimento.ano
@@ -84,7 +84,6 @@ int main () {
     if (pessoasCadastradas[i].nacionalidade == BRASILEIRO) {
       printf("Insira seu CPF: ");
       fgets(pessoasCadastradas[i].documento.cpf, 29, stdin);
-      pessoasCadastradas[i].documento.cpf[strcspn(pessoasCadastradas[i].documento.cpf, "-/.")] = "";
       pessoasCadastradas[i].documento.cpf[strcspn(pessoasCadastradas[i].documento.cpf, "\n")] = '\0';
     } else if (pessoasCadastradas[i].nacionalidade == ESTRANGEIRO) {
       printf("Insira seu passaporte: ");
@@ -100,19 +99,19 @@ int main () {
     printf("Nome: %s\n", pessoasCadastradas[i].nome);
     printf("Idade: %d\n", pessoasCadastradas[i].idade);
     printf("Peso: %.2f\n", pessoasCadastradas[i].peso);
-    printf("Data de nascimento: %d/%d/%d\n", 
+    printf("Data de nascimento: %d/%02d/%d\n", 
       pessoasCadastradas[i].dataDeNascimento.dia,
       pessoasCadastradas[i].dataDeNascimento.mes,
       pessoasCadastradas[i].dataDeNascimento.ano
     );
     printf("Nacionalidade: ");
 
-    if (pessoasCadastradas[i].nacionalidade == 1) {
+    if (pessoasCadastradas[i].nacionalidade == BRASILEIRO) {
       printf("Brasileiro\n");
-      printf("Numero do Documento: %d", pessoasCadastradas[i].documento.cpf);
-    } else if (pessoasCadastradas[i].nacionalidade == 2) {
+      printf("Numero do Documento: %s", pessoasCadastradas[i].documento.cpf);
+    } else if (pessoasCadastradas[i].nacionalidade == ESTRANGEIRO) {
       printf("Estrangeiro\n");
-      printf("Numero do Documento: %d", pessoasCadastradas[i].documento.passaporte);
+      printf("Numero do Documento: %s", pessoasCadastradas[i].documento.passaporte);
     } else {
       printf("Problema no cadastro");
     }
