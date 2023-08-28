@@ -30,6 +30,7 @@ int main () {
   
   // Não esta compilando na minha maquina, sem motivo aparente
   // No compilador online funcionou perfeitamente
+  // Diz "Referencia não definida para pow/sqrt"
   potenciaX = pow((coord[1].pontoX - coord[0].pontoX), 2);
   potenciaY = pow((coord[1].pontoY - coord[0].pontoY), 2);
   dist = sqrt(potenciaX + potenciaY);
