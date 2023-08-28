@@ -17,11 +17,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef enum {JAN=1, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV, DEZ} Meses;
+typedef enum {BRASILEIRO, ESTRANGEIRO} Nacionalidade;
 
 typedef struct {
   int dia;
-  Meses mes;
+  int mes;
   int ano;
 } Data;
 
@@ -30,10 +30,10 @@ typedef struct {
   int idade;
   float peso;
   Data dataDeNascimento;
-  int nacionalidade;
+  Nacionalidade nacionalidade;
   union {
-    unsigned int cpf;
-    unsigned int passaporte;
+    char cpf[30];
+    char passaporte[30];
   } documento;
 } Pessoa;
 
@@ -61,7 +61,7 @@ int main () {
 
     // DATA DE NASCIMENTO
     printf("Insira sua data de nascimento: ");
-    scanf("%d/%d/%d", 
+    scanf("%d/%0d/%d", 
       &pessoasCadastradas[i].dataDeNascimento.dia,
       &pessoasCadastradas[i].dataDeNascimento.mes,
       &pessoasCadastradas[i].dataDeNascimento.ano
@@ -80,12 +80,15 @@ int main () {
       );
     
     // CADASTRO DO DOCUMENTO
-    if (pessoasCadastradas[i].nacionalidade == 1) {
+    if (pessoasCadastradas[i].nacionalidade == BRASILEIRO) {
       printf("Insira seu CPF: ");
-      scanf("%d", &pessoasCadastradas[i].documento.cpf);
-    } else if (pessoasCadastradas[i].nacionalidade == 2) {
+      fgets(pessoasCadastradas[i].documento.cpf, 29, stdin);
+      pessoasCadastradas[i].documento.cpf[strcspn(pessoasCadastradas[i].documento.cpf, "-/.")] = "";
+      pessoasCadastradas[i].documento.cpf[strcspn(pessoasCadastradas[i].documento.cpf, "\n")] = '\0';
+    } else if (pessoasCadastradas[i].nacionalidade == ESTRANGEIRO) {
       printf("Insira seu passaporte: ");
-      scanf("%d", &pessoasCadastradas[i].documento.passaporte);
+      fgets(pessoasCadastradas[i].documento.passaporte, 29, stdin);
+      pessoasCadastradas[i].documento.passaporte[strcspn(pessoasCadastradas[i].documento.passaporte, "\n")] = '\0';
     }
     printf("\n");
     
