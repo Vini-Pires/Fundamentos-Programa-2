@@ -1,6 +1,6 @@
 /*
-  1) Faça um algoritmo que implemente uma função que receba 3 números
-  inteiros e retorne o maior valor;
+  1) Faça um algoritmo que implemente uma função que receba 3 números inteiros e 
+  retorne o maior valor. Se algum número for negativo retorne -1.
 */
 
 #include <stdio.h>
@@ -8,19 +8,25 @@
 
 /**
  * @brief Recebe um vetor com valores reais e compara 
- * entre eles para retornar o maior deles
+ * entre eles para retornar o maior deles caso não haja números negativos,
+ * nesse caso retorna -1
  * 
- * @param vetor Vetor com os valores a serem comparados
+ * @param vetor Vetor com os valores reais
  * @param tamanho Tamanho do vetor
- * @return Retorna o maior numero dentro do vetor
+ * @return Retorna o maior numero ou -1
  */
 
 float MaiorNum (float vetor[], int tamanho) {
   float maiorNum = 0;
   for (int i = 0; i < tamanho; i++){
-    if (vetor[i] > maiorNum) {
-      maiorNum = vetor[i];
-      i = 0;
+    if (vetor[i] >= 0) {
+      if (vetor[i] > maiorNum) {
+        maiorNum = vetor[i];
+        i = 0;
+      }
+    } else {
+      maiorNum = -1;
+      break;
     }
   }
   return maiorNum;
