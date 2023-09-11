@@ -15,6 +15,14 @@ typedef struct {
   char conceito;
 } Aluno;
 
+/**
+ * @brief Recebe um valor real entre 0 a 10 e retorna o conceito 
+ * proporcional desse valor
+ * 
+ * @param nota numero real 
+ * @return char - Carácter de 'A' a 'D' caso tudo ocorra bem, retorna 'F' caso 
+ * receba um valor fora do esperado
+ */
 char Conceitualizacao (float nota) {
   char conceito;
   if (nota <= 10.0 && nota >= 9.0) {
