@@ -7,12 +7,6 @@
     - Regra: Utilize structs, typedef, union e enum.
 */
 
-/*
-  Problema para armazenar a quantidade de números dentro do cpf
-  Possíveis soluções:
-    Dividir quantos números são armazenados numa variável
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
