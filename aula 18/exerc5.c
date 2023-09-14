@@ -37,7 +37,13 @@ void TransformaBinario (int bits, int inteiro) {
 }
 
 int main() {
-  TransformaBinario(8, 300);
+  int recebido;
+  const int byte = 8;
+
+  printf("Insira um valor para tornar-se binário: ");
+  scanf("%d", &recebido);
+
+  TransformaBinario(byte, recebido);
   printf("\n");
 
   return 0;
