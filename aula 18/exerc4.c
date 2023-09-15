@@ -11,11 +11,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int Fibonacci (int termo) {
-  if (termo == 0) {
-    return termo;
-  } else {
+void Fibonacci (int termosQueSeraoExibidos, int termo1, int termo2) {
+  int soma = 0;
+  
+  
+  if (termosQueSeraoExibidos == 0 && termo1 == 0) {
+    printf("Nenhuma geração requisitada\n");
+  }
+  
+  if (termosQueSeraoExibidos == 0 && termo1 != 0) {
+    printf("\n");
+  } else if (termosQueSeraoExibidos != 0 && termo1 == 0 ) {
+    if (termo1 == 0) {
+      printf("%d %d ", termo1, termo2);
+    }
+    soma = termo1 + termo2;
+    termo1 = termo2;
+    termo2 = soma;
+
+    printf("%d ", soma);
+    Fibonacci(termosQueSeraoExibidos - 1, termo1, termo2);
 
   }
 
+}
+
+int main() {
+  const int primeiroTermo = 0;
+  const int segundoTermo = 1;
+  int geracao;
+
+  printf("Até qual geração deseja que exiba? ");
+  scanf("%d", &geracao);
+
+  Fibonacci(geracao, primeiroTermo, segundoTermo);
+
+  return 0;
 }
