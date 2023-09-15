@@ -19,8 +19,8 @@
 int SomaConsecutivos (int valor) {
   int valoresSomados = 0;
   
-  for (valor; 0 <= valor; valor--) {
-    valoresSomados += valor;
+  for (int i = 0; i <= valor; i++) {
+    valoresSomados += i;
   }
 
   return valoresSomados;
