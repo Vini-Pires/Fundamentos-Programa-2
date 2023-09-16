@@ -1,0 +1,61 @@
+Lista de Exercícios 1
+
+A entrega dos exercícios não vale nota, mas é ALTAMENTE recomendável para consolidar o conteúdo aprendido e estar preparado para a segunda avaliação
+
+1) Crie uma estrutura representando um atleta. Essa estrutura deve conter o nome do atleta, seu esporte, idade e altura. Agora, escreva um programa que leia os dados de cinco atletas. Calcule e exiba os nomes do atleta mais alto e do mais velho.
+2) Usando a estrutura “atleta” do exercício anterior, escreva um programa que leia os dados de cinco atletas e os exiba por ordem de idade, do mais velho para o mais novo.
+Dica: Procure pelo algoritmo BubbleSort no Google
+
+3) Elabore uma função que receba como parâmetro um valor inteiro n e gere como saída um triângulo lateral formado por asteriscos conforme o exemplo a seguir, em que usamos n = 4:
+*
+**
+***
+****
+***
+**
+*
+
+4) Faça uma função que receba um inteiro N como parâmetro. Calcule e retorne o resultado da seguinte série S:
+
+
+5) Crie um programa que gerencie um cadastro de materiais para obras disponíveis em um fornecedor. Cada material contém: nome (tamanho máximo 40 caracteres), quantidade (int) e preço (float) de no máximo 15 produtos. O programa deve possuir um menu para que o usuário do programa consiga manipular os cadastros. Nesse menu
+
+  a) Ao digitar (I), deve-se realizar inserção de um material na primeira posição que estiver livre;
+  b) Ao digitar (R), deve-se remover o material pelo índice (a ser fornecido pelo usuário );
+  c) Ao digitar (L), deve-se listar todos os cadastros não vazios;
+  d) Ao digitar (P), deve-se solicitar o nome de um material e exibir a quantidade e o preço;
+  e) Ao digitar (V), deve-se listar todos os produtos que tenham a quantidade igual a 0;
+  f) Ao digitar (S), deve sair do programa.
+
+Obs: Cada opção do menu deve ser implementada em uma função diferente. Após cada função o menu deve ser reexibido (Exceto opção S)
+Não utilize variáveis globais. Utilize passagem de parâmetros quando necessário.
+Não se esqueça de criar um método para gerenciar qual posição do vetor está vazia ou não.
+
+6) Escreva uma função para o cálculo do volume e da área de uma esfera em que π = 3.1414592. O valor do raio r deve ser passado por parâmetro, e os valores calculados devem ser retornados por referência.
+
+
+7) Escreva uma função que receba como parâmetro um vetor contendo N valores inteiros. Essa função deve retornar, por referência, dois valores: a soma dos números pares e ímpares.
+
+
+8) Elabore uma função que receba por parâmetros os coeficientes de uma equação do segundo grau. Em seguida, calcule e mostre as raízes dessa equação. Lembre-se de que as raízes são calculadas como
+
+
+
+em que ∆ = b² – 4 * a * c e ax² +bx + c= 0 representa uma equação do segundo grau. A variável a tem de ser diferente de zero. Caso seja igual, imprima a mensagem “Não é equação de segundo grau” e retorne o valor −1. Do contrário, retorne o número de raízes e as raízes (por referência) se elas existirem:
+
+    • Se ∆ < 0, não existe real. Número de raízes: 0.
+    • Se ∆ = 0, existe uma raiz real. Número de raízes: 1.
+    • Se ∆ > 0, existem duas raízes reais. Número de raízes: 2
+
+9) Faça uma função recursiva que calcule o valor da série S descrita a seguir para um valor n maior do que zero a ser fornecido como parâmetro para ela:
+
+
+
+10) Em matemática, o número harmônico designado por Hn define-se como o enésimo termo da série harmônica. Ou seja:
+
+
+
+Escreva uma função recursiva que calcule o valor de qualquer Hn.
+
+11) Crie uma função recursiva que retorne a soma dos elementos de um vetor de inteiros.
+12) Crie uma função recursiva que retorne a média dos elementos de um vetor de inteiros.
