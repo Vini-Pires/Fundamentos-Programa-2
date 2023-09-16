@@ -21,7 +21,7 @@ void Fibonacci (int termosQueSeraoExibidos, int termo1, int termo2) {
   
   if (termosQueSeraoExibidos == 0 && termo1 != 0) {
     printf("\n");
-  } else if (termosQueSeraoExibidos != 0 && termo1 == 0 ) {
+  } else if (termosQueSeraoExibidos != 0) {
     if (termo1 == 0) {
       printf("%d %d ", termo1, termo2);
     }
