@@ -17,6 +17,7 @@ Dica: Procure pelo algoritmo BubbleSort no Google
 
 4) Faça uma função que receba um inteiro N como parâmetro. Calcule e retorne o resultado da seguinte série S:
 
+  S = (2 / 4) ; (5 / 5) ; (10 / 6) ; [(n² + 1) / (n + 3)] ;
 
 5) Crie um programa que gerencie um cadastro de materiais para obras disponíveis em um fornecedor. Cada material contém: nome (tamanho máximo 40 caracteres), quantidade (int) e preço (float) de no máximo 15 produtos. O programa deve possuir um menu para que o usuário do programa consiga manipular os cadastros. Nesse menu
 
