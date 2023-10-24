@@ -13,7 +13,7 @@ cripto.o: 1-cripto.c 1-cripto.h
 	gcc -c 1-cripto.c
 
 clean:
-	rm -f *.o $(BIN); clear
+	rm -f *.o $(BIN)
 
 run:
 	$(BIN)
