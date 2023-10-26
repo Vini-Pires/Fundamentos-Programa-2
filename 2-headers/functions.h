@@ -9,4 +9,11 @@
  */
 void coletaStringDoTeclado (char text[], int tamanho);
 
+/**
+ * @brief Verifica se o arquivo abriu corretamente
+ * 
+ * @param arq 
+ */
+void verificaArquivoAberto();
+
 #endif
